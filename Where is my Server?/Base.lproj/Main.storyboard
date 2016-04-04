@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Where_is_my_Server_" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zMr-h9-JjM">
+                                <rect key="frame" x="20" y="130" width="335" height="142"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="142" id="TEg-mO-0lJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fng-yK-bUT">
+                                <rect key="frame" x="20" y="505" width="335" height="142"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="abd-65-aPB">
+                                <rect key="frame" x="20" y="300" width="335" height="30"/>
+                                <state key="normal" title="Where Is My Server?"/>
+                                <connections>
+                                    <action selector="button:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aV4-bN-BhE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Welcome! Looking for your server?" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uXK-SI-t8i">
+                                <rect key="frame" x="20" y="20" width="335" height="46"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="W44-g7-niZ">
+                                <rect key="frame" x="28" y="325" width="318" height="222"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="trailing" secondItem="Fng-yK-bUT" secondAttribute="trailing" id="3bf-Wr-dI3"/>
+                            <constraint firstItem="W44-g7-niZ" firstAttribute="bottom" secondItem="Fng-yK-bUT" secondAttribute="bottom" constant="-100" id="6jb-x3-ftI"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="84M-5t-tLH"/>
+                            <constraint firstItem="abd-65-aPB" firstAttribute="top" secondItem="zMr-h9-JjM" secondAttribute="bottom" constant="28" id="BmD-fv-Ami"/>
+                            <constraint firstItem="W44-g7-niZ" firstAttribute="leading" secondItem="abd-65-aPB" secondAttribute="leading" constant="8" id="Bwc-1E-BL1"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="130" id="D3I-oW-rY5"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="trailing" secondItem="uXK-SI-t8i" secondAttribute="trailing" id="Hoz-co-BVi"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="trailing" secondItem="abd-65-aPB" secondAttribute="trailing" id="I1Z-WQ-qhH"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="leading" secondItem="Fng-yK-bUT" secondAttribute="leading" id="IAG-R2-SDG"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="4" id="Skb-td-oQ1"/>
+                            <constraint firstAttribute="bottom" secondItem="W44-g7-niZ" secondAttribute="bottom" constant="120" id="Vrp-Y1-xUR"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="leading" secondItem="abd-65-aPB" secondAttribute="leading" id="WKX-Y0-J2d"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="leading" secondItem="uXK-SI-t8i" secondAttribute="leading" id="d9q-kv-cJQ"/>
+                            <constraint firstItem="W44-g7-niZ" firstAttribute="trailing" secondItem="Fng-yK-bUT" secondAttribute="trailing" constant="-9" id="ghc-sr-Qms"/>
+                            <constraint firstItem="W44-g7-niZ" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="305" id="gnr-ZE-y4Y"/>
+                            <constraint firstItem="zMr-h9-JjM" firstAttribute="top" secondItem="uXK-SI-t8i" secondAttribute="bottom" constant="64" id="ijY-nK-IzZ"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="display" destination="zMr-h9-JjM" id="eSR-Xi-8M1"/>
+                        <outlet property="image" destination="W44-g7-niZ" id="mho-WP-eHd"/>
+                        <outlet property="lowerDisplay" destination="Fng-yK-bUT" id="c6k-dP-SCm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="504.5" y="337.5"/>
+        </scene>
+    </scenes>
+</document>
