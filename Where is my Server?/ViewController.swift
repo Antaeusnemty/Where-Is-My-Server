@@ -4,9 +4,9 @@
 //
 //  Created by Alex Tyler on 3/29/16.
 //  Copyright © 2016 Alex Tyler. All rights reserved.
-//  *Change Audio File to exclamation of namesake, Change the image each time button clicked to match activity, Add color, Make UI more pleasent *
-//  Still need to add ability to grab a string out of array and set equal to var selected (which is an empty string now)
-
+//  *Change Audio File to exclamation of namesake, Change the image each time button clicked to match activity?, Add color, Make UI more pleasent *
+//  add up to at least 11 strings in each array and move to using more random number generator-> srandom(UInt32(time(nil))) var randomNumber = random() / (array.count*100000000)
+//having srandom(UInt32(time(nil))) in view did load adds more randomness to Int output dont really even need var randomNumber = random() / (array.count*100000000) because let randomIndex = Int(arc4random_uniform(UInt32(array.count))) is being adjusted by srandom(UInt32(time(nil))) in the view did load 
 
 import UIKit
 import AVFoundation
@@ -28,13 +28,14 @@ class ViewController: UIViewController {
     @IBOutlet var lowerDisplay: UILabel!
     var selected = ""//this a variable that will contain a randomly selected string out of these arrays
     
-    var array = ["Hiding from you around the corner","Pretending to use the restroom","Checking SnapChat"]
+    var array = ["Your server is currently: Hiding from you around the corner","Your server is currently: Pretending to use the restroom","Your server is currently: Checking SnapChat"]
     
     
-    var lowerArray = ["Climbing Mt. Kilimanjaro","Water skiing in Norway","Parachuting from the top of the Burj Khalifa"]
+    var lowerArray = ["Your server is currently: Climbing Mt. Kilimanjaro","Your server is currently: Water skiing in Norway","Your server is currently: Parachuting from the top of the Burj Khalifa"]
     override func viewDidLoad() {
         super.viewDidLoad()
         image.image = UIImage(named: "th.jpg")//copy this within function in order to add ability to change image upon function run
+        srandom(UInt32(time(nil)))
         
         do {
             
@@ -75,26 +76,56 @@ class ViewController: UIViewController {
 // I need the ability to grab a string out of an array in all 3 of these functions.*** longPress & swipeFunction should grab a string from lowerArray ***
     @IBAction func button(sender: AnyObject)
     {
-        //pick a string out of an array
-        //change the .text of the label(display) to random string
-        display.text = selected
+        //display.text = selected ** moved this below actions so it will display changed text on first click
         
         //change the .text of the label(lowerDisplay)
         lowerDisplay.text = "Squeeze or Swipe Here! If your really hangery!"
         musicPlayer!.play()//play exclamation of namesake
+        //generate a random number (within the number of how many strings I have)(could always add more and update range)
+        //set it equal to a new variable
+        //use the new variable as indexOf() or other index config stuff in order to grab a random string out of array
+        let randomIndex = Int(arc4random_uniform(UInt32(array.count))) //Source: http://stackoverflow.com/questions/24003191/pick-a-random-element-from-an-array
+        //print(randomIndex)//prints Int value (random Int within range of array)
+        //print(array[randomIndex])//prints string
+        selected = array[randomIndex]
+        //print(selected)
+        print("button ran")
         
+        display.text = selected
+        
+        var randomNumber = random() / (array.count*100000000)
+        print(randomNumber)
+        print(array[randomNumber])
     }
     func longPressFunction()
     { print("longPress ran")
         display.text = selected
         lowerDisplay.text = "Squeeze or Swipe Here! If your really hangery!"
         musicPlayer!.play()//play exclamation of namesake
+        //generate a random number (within the number of how many strings I have)(could always add more and update range)
+        //set it equal to a new variable
+        //use the new variable as indexOf() or other index config stuff in order to grab a random string out of array
+        let randomIndex = Int(arc4random_uniform(UInt32(lowerArray.count)))
+        print(randomIndex)//prints Int value (random Int within range of array)
+        print(lowerArray[randomIndex])//prints string
+        selected = lowerArray[randomIndex]
+        print(selected)
+        display.text = selected
     }
     func swipeFunction()
     { print("swipeFunction ran")
         display.text = selected
         lowerDisplay.text = "Squeeze or Swipe Here! If your really hangery!"
         musicPlayer!.play()//play exclamation of namesake
+        //generate a random number (within the number of how many strings I have)(could always add more and update range)
+        //set it equal to a new variable
+        //use the new variable as indexOf() or other index config stuff in order to grab a random string out of array
+        let randomIndex = Int(arc4random_uniform(UInt32(lowerArray.count)))
+        print(randomIndex)//prints Int value (random Int within range of array)
+        print(lowerArray[randomIndex])//prints string
+        selected = lowerArray[randomIndex]
+        print(selected)
+        display.text = selected
     
     }
     
