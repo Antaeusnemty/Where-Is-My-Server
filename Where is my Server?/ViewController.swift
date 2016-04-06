@@ -78,7 +78,7 @@ class ViewController: UIViewController {
     @IBAction func button(sender: AnyObject)
     {
         //display.text = selected ** moved this below actions so it will display changed text on first click
-        spinner.startAnimating()
+        
         //change the .text of the label(lowerDisplay)
         lowerDisplay.text = "Squeeze or Swipe Here! If your really hangery!"
         musicPlayer!.play()//play exclamation of namesake
