@@ -4,9 +4,9 @@
 //
 //  Created by Alex Tyler on 3/29/16.
 //  Copyright © 2016 Alex Tyler. All rights reserved.
-//  *Change Audio File to exclamation of namesake, Change the image each time button clicked to match activity?, Add color, Make UI more pleasent *
-//  add up to at least 11 strings in each array and move to using more random number generator-> srandom(UInt32(time(nil))) var randomNumber = random() / (array.count*100000000)
-//having srandom(UInt32(time(nil))) in view did load adds more randomness to Int output dont really even need var randomNumber = random() / (array.count*100000000) because let randomIndex = Int(arc4random_uniform(UInt32(array.count))) is being adjusted by srandom(UInt32(time(nil))) in the view did load 
+//  *Change Audio File to exclamation of namesake maybe two exclamations of namesake one more angry(hangry), Change the image each time button clicked to match activity?, Add color, Make UI more pleasent *
+//  more random number generator-> srandom(UInt32(time(nil))) var randomNumber = random() / (array.count*100000000)
+//  having srandom(UInt32(time(nil))) in view did load adds more randomness to Int output dont really even need var randomNumber = random() / (array.count*100000000) because let randomIndex = Int(arc4random_uniform(UInt32(array.count))) is being adjusted by srandom(UInt32(time(nil))) in the view did load
 
 import UIKit
 import AVFoundation
@@ -14,6 +14,7 @@ import AVFoundation
 class ViewController: UIViewController {
     
     @IBOutlet var image: UIImageView!
+    @IBOutlet var spinner: UIActivityIndicatorView!
     
     var longPressRecognizer = UILongPressGestureRecognizer()
     var swipeRecognizer = UISwipeGestureRecognizer()
@@ -28,10 +29,10 @@ class ViewController: UIViewController {
     @IBOutlet var lowerDisplay: UILabel!
     var selected = ""//this a variable that will contain a randomly selected string out of these arrays
     
-    var array = ["Your server is currently: Hiding from you around the corner","Your server is currently: Pretending to use the restroom","Your server is currently: Checking SnapChat"]
+    var array = ["Your server is currently: Hiding from you around the corner","Your server is currently: Pretending to use the restroom","Your server is currently: Checking SnapChat","Your server is currently: Looking at Twitter","Your server is currently: doing it for the Yeti","Your server is currently: Hitting the Quan","Your server is currently: Doing the Dab","Your server is currently: Joking with co-workers about the table next to you","Your server is currently: Looking for a pen","Your server is currently: Gobbling down dinner as fast as possible","Your server is currently: Paying for jimmy johns out back"]//11
     
     
-    var lowerArray = ["Your server is currently: Climbing Mt. Kilimanjaro","Your server is currently: Water skiing in Norway","Your server is currently: Parachuting from the top of the Burj Khalifa"]
+    var lowerArray = ["Your server is currently: Climbing Mt. Kilimanjaro","Your server is currently: Water skiing in Norway","Your server is currently: Parachuting from the top of the Burj Khalifa","Your server is currently: Playing water polo in England","Your server is currently: Building a zen garden in Tokyo","Your server is currently: Surfing pipeline on the north shore","Your server is currently: Setting the world land speed record for the 30 meter bus-tub dash","Your server is currently: Signing up for HealthCare.gov","Your server is currently: Watching grass grow","Your server is currently: Solving the Yang–Mills mass gap","Your server is currently: Racing in Le Tour de France"] //11
     override func viewDidLoad() {
         super.viewDidLoad()
         image.image = UIImage(named: "th.jpg")//copy this within function in order to add ability to change image upon function run
@@ -77,7 +78,7 @@ class ViewController: UIViewController {
     @IBAction func button(sender: AnyObject)
     {
         //display.text = selected ** moved this below actions so it will display changed text on first click
-        
+        spinner.startAnimating()
         //change the .text of the label(lowerDisplay)
         lowerDisplay.text = "Squeeze or Swipe Here! If your really hangery!"
         musicPlayer!.play()//play exclamation of namesake
