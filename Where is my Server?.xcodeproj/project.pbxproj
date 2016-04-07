@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		086D610F1CAC8D8C00448D75 /* a.wav in Resources */ = {isa = PBXBuildFile; fileRef = 086D610E1CAC8D8C00448D75 /* a.wav */; };
 		086D61111CACA16F00448D75 /* th.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 086D61101CACA16F00448D75 /* th.jpg */; };
 		08D00FB71CAB3E30002E6A28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D00FB61CAB3E30002E6A28 /* AppDelegate.swift */; };
 		08D00FB91CAB3E30002E6A28 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D00FB81CAB3E30002E6A28 /* ViewController.swift */; };
@@ -16,6 +15,8 @@
 		08D00FC11CAB3E30002E6A28 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 08D00FBF1CAB3E30002E6A28 /* LaunchScreen.storyboard */; };
 		08D00FCC1CAB3E30002E6A28 /* Where_is_my_Server_Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D00FCB1CAB3E30002E6A28 /* Where_is_my_Server_Tests.swift */; };
 		08D00FD71CAB3E30002E6A28 /* Where_is_my_Server_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08D00FD61CAB3E30002E6A28 /* Where_is_my_Server_UITests.swift */; };
+		08F0DB9E1CB7242D0050C078 /* j.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 08F0DB9D1CB7242D0050C078 /* j.mp3 */; };
+		08F0DBA01CB724320050C078 /* w.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 08F0DB9F1CB724320050C078 /* w.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		086D610E1CAC8D8C00448D75 /* a.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = a.wav; sourceTree = "<group>"; };
 		086D61101CACA16F00448D75 /* th.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = th.jpg; sourceTree = "<group>"; };
 		08D00FB31CAB3E30002E6A28 /* Where is my Server?.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Where is my Server?.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D00FB61CAB3E30002E6A28 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +51,8 @@
 		08D00FD21CAB3E30002E6A28 /* Where is my Server?UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Where is my Server?UITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		08D00FD61CAB3E30002E6A28 /* Where_is_my_Server_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Where_is_my_Server_UITests.swift; sourceTree = "<group>"; };
 		08D00FD81CAB3E30002E6A28 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08F0DB9D1CB7242D0050C078 /* j.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = j.mp3; sourceTree = "<group>"; };
+		08F0DB9F1CB724320050C078 /* w.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = w.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +104,8 @@
 			isa = PBXGroup;
 			children = (
 				086D61101CACA16F00448D75 /* th.jpg */,
-				086D610E1CAC8D8C00448D75 /* a.wav */,
+				08F0DB9F1CB724320050C078 /* w.mp3 */,
+				08F0DB9D1CB7242D0050C078 /* j.mp3 */,
 				08D00FB61CAB3E30002E6A28 /* AppDelegate.swift */,
 				08D00FB81CAB3E30002E6A28 /* ViewController.swift */,
 				08D00FBA1CAB3E30002E6A28 /* Main.storyboard */,
@@ -238,10 +241,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08F0DBA01CB724320050C078 /* w.mp3 in Resources */,
+				08F0DB9E1CB7242D0050C078 /* j.mp3 in Resources */,
 				086D61111CACA16F00448D75 /* th.jpg in Resources */,
 				08D00FC11CAB3E30002E6A28 /* LaunchScreen.storyboard in Resources */,
 				08D00FBE1CAB3E30002E6A28 /* Assets.xcassets in Resources */,
-				086D610F1CAC8D8C00448D75 /* a.wav in Resources */,
 				08D00FBC1CAB3E30002E6A28 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

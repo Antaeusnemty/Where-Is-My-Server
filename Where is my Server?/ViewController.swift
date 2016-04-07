@@ -4,7 +4,7 @@
 //
 //  Created by Alex Tyler on 3/29/16.
 //  Copyright © 2016 Alex Tyler. All rights reserved.
-//  *Change Audio File to exclamation of namesake maybe two exclamations of namesake one more angry(hangry), Change the image each time button clicked to match activity?, Add color, Make UI more pleasent *
+//  Change the image each time button clicked to match activity?, Add color, Make UI more pleasent *
 //  more random number generator-> srandom(UInt32(time(nil))) var randomNumber = random() / (array.count*100000000)
 //  having srandom(UInt32(time(nil))) in view did load adds more randomness to Int output dont really even need var randomNumber = random() / (array.count*100000000) because let randomIndex = Int(arc4random_uniform(UInt32(array.count))) is being adjusted by srandom(UInt32(time(nil))) in the view did load
 
@@ -24,7 +24,9 @@ class ViewController: UIViewController {
     let rightSwipeRecognizer = UISwipeGestureRecognizer()
     
     var musicPlayer : AVAudioPlayer?
-    var a = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("a", ofType: "wav")!)
+    var musicPlayer2 : AVAudioPlayer?
+    var w = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("w", ofType: "mp3")!)
+    var j = NSURL(fileURLWithPath: NSBundle.mainBundle().pathForResource("j", ofType: "mp3")!)
     @IBOutlet var display: UILabel!
     @IBOutlet var lowerDisplay: UILabel!
     var selected = ""//this a variable that will contain a randomly selected string out of these arrays
@@ -40,12 +42,13 @@ class ViewController: UIViewController {
         
         do {
             
-            try musicPlayer =  AVAudioPlayer(contentsOfURL: self.a)
+            try musicPlayer =  AVAudioPlayer(contentsOfURL: self.j)//need this for both new audio files
+            try musicPlayer2 =  AVAudioPlayer(contentsOfURL: self.w)
         }
             
         catch
         {
-            print("D'oh does not compute beep boop beep - oops you broke it")
+            print("D'oh")
         }//end of do - catch
         
         //the target is the element (self) //the action is the name of the function that should be called when a swipe happens on a specific object
@@ -81,7 +84,7 @@ class ViewController: UIViewController {
         
         //change the .text of the label(lowerDisplay)
         lowerDisplay.text = "Squeeze or Swipe Here! If your really hangery!"
-        musicPlayer!.play()//play exclamation of namesake
+        musicPlayer2!.play()//play exclamation of namesake
         //generate a random number (within the number of how many strings I have)(could always add more and update range)
         //set it equal to a new variable
         //use the new variable as indexOf() or other index config stuff in order to grab a random string out of array
@@ -105,7 +108,7 @@ class ViewController: UIViewController {
         musicPlayer!.play()//play exclamation of namesake
         //generate a random number (within the number of how many strings I have)(could always add more and update range)
         //set it equal to a new variable
-        //use the new variable as indexOf() or other index config stuff in order to grab a random string out of array
+        //use the new variable in order to grab a random string out of array
         let randomIndex = Int(arc4random_uniform(UInt32(lowerArray.count)))
         print(randomIndex)//prints Int value (random Int within range of array)
         print(lowerArray[randomIndex])//prints string
